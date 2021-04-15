@@ -5,7 +5,7 @@ Date: 02/21/2021
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, img, h1, ul, section, aside, figure {
+body, header, nav, main, footer, img, h1, ul, section, aside, figure, form {
     margin: 0;
     padding: 0;
     border: 0;
@@ -23,6 +23,7 @@ img {
 }
 
 /* Style rules for mobile viewport */
+
 aside {
   text-align: center;
   font-size: 1.5em;
@@ -128,9 +129,10 @@ main p {
     font-weight: bold;
 }
 
-#contact {
+#contact, #rental h2, #form h2 {
     text-align: center;
 }
+
 
 .tel-link {
     background-color: #373684;
@@ -157,6 +159,59 @@ main p {
     border: 5px solid #373684;
     width: 95%;
     height: 50%;
+}
+
+/* Style rules for table elements */
+
+table {
+    border: 1px solid #373684;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+}
+ 
+caption {
+    font-size: 1.5em;
+    font-weight: bold; 
+    padding: 1%;
+}
+ 
+th, td {
+    border: 1px solid #373684;
+    padding: 2%; 
+}
+ 
+th {
+    background-color: #373684;
+    color: #fff;
+    font-size: 1.15em;
+}
+ 
+tr:nth-child(odd) {
+    background-color: #b7b7e1;  
+}
+
+/* Style rules for form elements */
+fieldset, input {
+  margin-bottom: 2%;
+} 
+
+fieldset legend {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+label {
+  display: block;
+  padding-top: 3%;
+}
+
+form #submit {
+  margin: 0 auto;
+  display: block;
+  padding: 3%;
+  background-color: #b7b7e1;
+  font-size: 1em;
 }
 
 /* Style rules for footer content */
@@ -213,11 +268,21 @@ nav li a {
   height: 450px;
 }
 
+
+/* Tablet Viewport: Style rule for form element */
+/* This program sucks: 0.07% difference?  */
+form {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .grid {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 20px;
 }
+
+
 
 } /* Close Media query */
 
@@ -264,6 +329,21 @@ figcaption {
 
 aside {
   grid-column: 1 / span 4;
+}
+
+/*Desktop Viewport: Style rules for table element.*/
+table {
+  width: 70%;
+}
+
+/* Desktop Viewport: Style rules for form elements */
+.form-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+}
+.btn {
+  grid-column: 1/span 2;
 }
 
 } /*close desktop media query */
